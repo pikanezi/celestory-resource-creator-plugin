@@ -3,9 +3,15 @@
 	"displayName": "celestory-resource-creator",
 	"description": "",
 	"version": "0.0.1",
+	"publisher": "celestory",
 	"engines": {
 		"vscode": "^1.35.0"
 	},
+	"repository": {
+        "type": "git",
+        "url": "https://github.com/pikanezi/celestory-resource-creator-plugin"
+    },
+	"license": "MIT",
 	"categories": [
 		"Other"
 	],
