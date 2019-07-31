@@ -14,7 +14,7 @@ export interface ${titleName}Data extends ResourceData {
     ${data.properties.map(prop => `\t${prop};`).join('\n')}
 }
 
-export const is${titleName}Resource = (resource: ResourceModel): resource is ResourceModel<${titleName}Data> => {
+export const is${titleName}Resource = (resource: Resource | ResourceModel): resource is Resource<${titleName}Data> | ResourceModel<${titleName}Data> => {
     return resource.type.startsWith('${titleName}');
 };
 
@@ -46,6 +46,8 @@ export const createResourceData = async (path: string, data: ResourceData, paths
         autofill: ${data.autofill},
         template: 0,
         typeTree,
+        preferEditor: false,
+        useAsVariable: true,
         createResource: () => create${titleName}Resource(typeTree),
     }),`;
     const resourceFactoriesPredicate = /export const resourceFactories: ResourceFactories = {/;
