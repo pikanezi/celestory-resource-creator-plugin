@@ -2,7 +2,7 @@
 	"name": "celestory-resource-creator",
 	"displayName": "celestory-resource-creator",
 	"description": "",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "celestory",
 	"engines": {
 		"vscode": "^1.35.0"
